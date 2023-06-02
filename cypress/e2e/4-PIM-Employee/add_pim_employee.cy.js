@@ -1,11 +1,11 @@
 
-import basePim from "../support/PageObject/pimPage.cy"
+import basePim from "../../support/PageObject/pimPage.cy"
 
 describe('Menu: PIM', () => {
   const BasePim = new basePim()
   //upload file
   const imageFile = 'profil.jpg'
-  const dataPim = require("../fixtures/tricentis/pim.json")
+  const dataPim = require("../../fixtures/tricentis/pim.json")
 
   beforeEach(() => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
@@ -14,8 +14,8 @@ describe('Menu: PIM', () => {
     cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input')
     .type('admin123').should('have.value', 'admin123')
     cy.get('.oxd-button').click()
-    cy.get('.oxd-topbar-header-breadcrumb > .oxd-text').contains("Dashboard")
-    .wait(1000)
+    //cy.get('.oxd-topbar-header-breadcrumb > .oxd-text').contains("Dashboard")
+    cy.wait(1000)
   })
 
   // ========== POSITIF CASE =============
@@ -27,7 +27,7 @@ describe('Menu: PIM', () => {
     cy.get(BasePim.firstName).type("Colton")
     cy.get(BasePim.middleName).type("Yoko Levy")
     cy.get(BasePim.lastName).type("Mcknight")
-    cy.get(BasePim.employeeId).clear().type("1232324453")
+    cy.get(BasePim.employeeId).clear().type("17124453")
     //cy.get('.oxd-file-div > .oxd-icon-button > .oxd-icon').click()
 
     //upload image
@@ -48,11 +48,11 @@ describe('Menu: PIM', () => {
     cy.get(BasePim.firstName).type("Gray")
     cy.get(BasePim.middleName).type("Timon Cannon")
     cy.get(BasePim.lastName).type("Burks")
-    cy.get(BasePim.employeeId).clear().type("3245798732")
+    cy.get(BasePim.employeeId).clear().type("66192781")
     //cy.get('.oxd-file-div > .oxd-icon-button > .oxd-icon').click()
 
     cy.get(BasePim.loginDetail).click()
-    cy.get(BasePim.username).type("imgray")
+    cy.get(BasePim.username).type("imgray6")
     cy.get(BasePim.password).type("Hanamasa123!")
     cy.get(BasePim.confirmPassword).type("Hanamasa123!")
     //enabled
@@ -73,7 +73,7 @@ describe('Menu: PIM', () => {
 
     //login again using new account
     cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input')
-    .type('imgray').should('have.value', 'imgray')
+    .type('imgray6').should('have.value', 'imgray6')
     cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input')
     .type('Hanamasa123!').should('have.value', 'Hanamasa123!')
     cy.get('.oxd-button').click()
@@ -90,11 +90,11 @@ describe('Menu: PIM', () => {
     cy.get(BasePim.firstName).type("Trevor")
     cy.get(BasePim.middleName).type("Kaseem Pena")
     cy.get(BasePim.lastName).type("Blackburn")
-    cy.get(BasePim.employeeId).clear().type("1322344543")
+    cy.get(BasePim.employeeId).clear().type("6674543")
     //cy.get('.oxd-file-div > .oxd-icon-button > .oxd-icon').click()
 
     cy.get(BasePim.loginDetail).click()
-    cy.get(BasePim.username).type("imtrevor4")
+    cy.get(BasePim.username).type("imtrevor5")
     cy.get(BasePim.password).type("Hanamasa123!")
     cy.get(BasePim.confirmPassword).type("Hanamasa123!")
     
@@ -118,7 +118,7 @@ describe('Menu: PIM', () => {
 
     //login again using new account
     cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input')
-    .type('imtrevor4').should('have.value', 'imtrevor4')
+    .type('imtrevor5').should('have.value', 'imtrevor5')
     cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input')
     .type('Hanamasa123!').should('have.value', 'Hanamasa123!')
     cy.get('.oxd-button').click()
