@@ -5,13 +5,23 @@ class basePim {
     middleName = ':nth-child(2) > :nth-child(2) > .oxd-input'
     lastName = ':nth-child(3) > :nth-child(2) > .oxd-input'
     employeeId = '.oxd-grid-item > .oxd-input-group > :nth-child(2) > .oxd-input'
-    uploadFile = 'input[type=file'
+    uploadFile = 'input[type=file]'
     saveButton = '.oxd-button--secondary'
 
     //verify
     verifyTextName = '.orangehrm-edit-employee-name > .oxd-text'
     verifyUsernameDropdown = '.oxd-userdropdown-name'
     verifyAccountDisabled = '.oxd-alert-content > .oxd-text'
+
+    //verify Field
+    verifyFirstName = '.--name-grouped-field > :nth-child(1) > .oxd-text'
+    verifyMidleName = '.--name-grouped-field > :nth-child(2) > .oxd-text'
+    verifyLastName = '.--name-grouped-field > :nth-child(3) > .oxd-text'
+    verifyUsername = ':nth-child(4) > .oxd-grid-2 > :nth-child(1) > .oxd-input-group > .oxd-text'
+    verifyPassword = '.user-password-cell > .oxd-input-group > .oxd-text'
+    verifyConfirmPassword = '.oxd-grid-2 > :nth-child(2) > .oxd-input-group > .oxd-text'
+    verifyImage = '.orangehrm-employee-image > .oxd-input-group > .oxd-text'
+    verifyEmployeeId = ':nth-child(1) > .oxd-grid-2 > .oxd-grid-item > .oxd-input-group > .oxd-text'
 
     //detail login form
     loginDetail = '.oxd-switch-input'
