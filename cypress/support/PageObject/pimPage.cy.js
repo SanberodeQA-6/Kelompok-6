@@ -66,7 +66,13 @@ class basePim {
     editBloodtype = '.orangehrm-card-container > .oxd-form > .oxd-form-row > .oxd-grid-3 > .oxd-grid-item > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text'
     editSaveBloodtype = '.orangehrm-card-container > .oxd-form > .oxd-form-actions > .oxd-button'
 
-
+    // ======== PIM LIST USER =========
+    searchlist = '.oxd-form-actions > .oxd-button--secondary'
+    namesearch = ':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-autocomplete-wrapper > .oxd-autocomplete-text-input > input'
+    idsearch = ':nth-child(2) > .oxd-input'
+    resetsearch = '.oxd-button--ghost'
+    searchrecordfound = '.orangehrm-horizontal-padding'
+    tabelrecord = '.oxd-table-card > .oxd-table-row'
 }
 
 export default basePim;

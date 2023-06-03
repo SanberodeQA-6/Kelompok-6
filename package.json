@@ -16,10 +16,8 @@
     "url": "https://github.com/SanberodeQA-6/Kelompok-6/issues"
   },
   "homepage": "https://github.com/SanberodeQA-6/Kelompok-6#readme",
-  "dependencies": {
-    "cypress": "^12.13.0"
-  },
   "devDependencies": {
+    "cypress": "^12.13.0",
     "cypress-file-upload": "^5.0.8"
   }
 }
