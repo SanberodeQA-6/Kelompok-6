@@ -1,6 +1,6 @@
 
 // DIKA
-describe('template spec', () => {
+describe('admin user management', () => {
 
     beforeEach('open page and login', () => {
       cy.visit('https://opensource-demo.orangehrmlive.com/')

@@ -1,5 +1,5 @@
 // DIKA
-describe('template spec', () => {
+describe('add admin user management', () => {
   beforeEach('open page and login', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/')
     cy.get('[name="username"]').type('Admin')
