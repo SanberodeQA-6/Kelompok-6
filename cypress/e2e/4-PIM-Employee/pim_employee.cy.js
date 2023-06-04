@@ -17,10 +17,10 @@ describe('Menu : PIM', () => {
   
   it('Input Valid Data', () => {
     cy.get(BasePim.pimMenu).click()
-    cy.get(BasePim.namesearch).type('Aaliyah Haq')
-    cy.get(BasePim.idsearch).type('0038')
+    cy.get(BasePim.namesearch).type('John Doe')
+    cy.get(BasePim.idsearch).type('0269')
     cy.get(BasePim.searchlist).click({force:true})
-    cy.get(BasePim.tabelrecord).should('contain', 'Aaliyah Haq')
+    cy.get(BasePim.tabelrecord).should('contain', 'John Doe')
   })
 
   it('Reset search filter', () => {
