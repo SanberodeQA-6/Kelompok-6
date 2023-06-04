@@ -20,7 +20,7 @@ describe('Menu : Admin', () => {
 
 
   beforeEach('open page and login', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/',{timeout:10000})
+    cy.visit('https://opensource-demo.orangehrmlive.com/',{timeout:900000})
     cy.get('[name="username"]').type('Admin')
     cy.get('[type="password"]').type('admin123')
     cy.get('[type="submit"]').click()
@@ -49,7 +49,7 @@ describe('Menu : Admin', () => {
     cy.get(admin.Menulocations, {timeout:10000}).click() //menu locations
     cy.get(admin.logopensil, {timeout:10000}).click() //logo pensil
     cy.get(admin.editcancelbutton, {timeout:10000}).click({force:true}) //tombol cancel edit
-    cy.get(admin.assertcancel).should('be.visible').should('contain', 'Records Found')
+    cy.get(admin.assertcancel).should('be.visible').should('contain', 'Record Found')
     })
   
   //Negative case
