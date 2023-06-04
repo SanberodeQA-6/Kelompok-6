@@ -1,21 +1,18 @@
 import basePim from "../../support/PageObject/pimPage.cy"
+import baseLogin from "../../support/PageObject/loginPage.cy"
+
+const login = new baseLogin()
+const pim = new basePim()
+const dataLogin = require("../../fixtures/tricentis/login.json")
+
 
 describe('Menu: PIM', () => {
-  const BasePim = new basePim()
-  //upload file
-  //const imageFile = 'profil.jpg'
-  //const dataPim = require("../../fixtures/tricentis/pim.json")
 
   beforeEach(() => {
-
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
-    cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input')
-    .type('Admin').should('have.value', 'Admin')
-    cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input')
-    .type('admin123').should('have.value', 'admin123')
-    cy.get('.oxd-button').click()
-    //cy.get('.oxd-topbar-header-breadcrumb > .oxd-text').contains("Dashboard")
-
+    cy.visit(login.url)
+    cy.get(login.usernameField).type(dataLogin.username).should('have.value', dataLogin.username)
+    cy.get(login.passwordField).type(dataLogin.password).should('have.value', dataLogin.password)
+    cy.get(login.loginButton).click()
     cy.wait(1000)
   })
 
@@ -23,19 +20,23 @@ describe('Menu: PIM', () => {
 
   // DELETE DATA
   it('[+] DELETE Data', () => {
-    cy.get(BasePim.pimMenu).click()
+    cy.get(pim.pimMenu).click()
     cy.wait(700)
-    cy.get(BasePim.searchEmployeeId).type('17124453{enter}')
-    cy.wait(4000)
-    cy.get(BasePim.deleteButton).click()    
+    cy.get(pim.deleteButton).click({force:true})    
     cy.wait(1000)
-    cy.get(BasePim.confirmDelete).click()
-    cy.get(BasePim.verifyNoRecordFounds).should('contain.text', 'No Records Found')
+    cy.get(pim.confirmDelete).click()
+    cy.get(pim.successSavedAlert).should('be.visible')
     cy.wait(3000)
 
-
-
-    
   })
 
+  it('[-] Cancel Delete ', () => {
+    cy.get(pim.pimMenu).click()
+    cy.wait(700)
+    cy.get(pim.deleteButton).click({force:true})    
+    cy.wait(1000)
+    cy.get(pim.cancelDelete).click()
+    cy.get(pim.assertCancel).should('be.visible')
+    cy.wait(3000)
+    })
 })

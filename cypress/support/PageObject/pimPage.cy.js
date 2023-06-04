@@ -4,12 +4,14 @@ class basePim {
     addButton = '.orangehrm-header-container > .oxd-button'
     searchEmployeeId = ':nth-child(2) > .oxd-input'
     searchButton = 'oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space'
-    editButton = '.oxd-table-cell-actions > :nth-child(2) > .oxd-icon'
-    deleteButton = '.oxd-table-cell-actions > :nth-child(1) > .oxd-icon'
+    editButton = ':nth-child(8) > .oxd-table-row > :nth-child(9) > .oxd-table-cell-actions > :nth-child(2) > .oxd-icon'
+    deleteButton = ':nth-child(3) > .oxd-table-row > :nth-child(9) > .oxd-table-cell-actions > :nth-child(1) > .oxd-icon'
     confirmDelete = '.oxd-button--label-danger'
-
+    cancelDelete = '.oxd-button--text'
+    successSavedAlert = '.oxd-toast'
+    assertCancel = '.orangehrm-horizontal-padding > .oxd-text'
+    
     // ======= ADD Form ========
-
     firstName = '.--name-grouped-field > :nth-child(1) > :nth-child(2) > .oxd-input'
     middleName = ':nth-child(2) > :nth-child(2) > .oxd-input'
     lastName = ':nth-child(3) > :nth-child(2) > .oxd-input'

@@ -1,4 +1,17 @@
 {
-    "moreThan64Char" : "boydkoasdksldkprwelaskkasodksaodksakdasboydkoasdksldkprwelaskkasodksaodksakdas",
-    "lessThan7Char"  : "dfsa"
+    "required" : "Required",
+    "accountDisabled" : "Account disabled",
+    "notExceed7Char" : "Should have at least 7 characters",
+    "notExceed10Char" : "Should not exceed 10 characters",
+    "notExceed30Char" : "Should not exceed 30 characters",
+    "notExceed40Char" : "Should not exceed 40 characters",
+    "notExceed64Char" : "Should not exceed 64 characters",
+    "employeeIdExist" : "Employee Id already exists",
+    "usernameExist" : "Username already exists",
+    "passwordDontMatch" : "Passwords do not match",
+    "passwordSpace" :"Your password should not contain spaces",
+    "passwordNoLower" : "Your password must contain minimum 1 lower-case letter",
+    "passwordNoNumber" : "Your password must contain minimum 1 number"
+
+
 }

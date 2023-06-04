@@ -1,0 +1,12 @@
+{
+
+    "username" : "Admin",
+    "password"  : "admin123",
+    "dashboard" : "Dashboard",
+    "wrongUsername" : "wrongadmin",
+    "wrongPassword" : "wrongpassword",
+    "invalidCredentials" : "Invalid credentials",
+    "emptyField" : "Required"
+
+    
+}
